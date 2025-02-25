@@ -30,7 +30,7 @@ class ActorsController < ApplicationController
   end
 
   def destroy
-    the_id = params.fetch("path_id")
+    the_id = params.fetch("an_id")
 
     matching_records = Actor.where({ :id=> the_id})
 
