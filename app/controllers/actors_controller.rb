@@ -9,11 +9,10 @@ class ActorsController < ApplicationController
     the_actor.dob = params.fetch("the_dob")
     the_actor.bio = params.fetch("the_bio")
     the_actor.image = params.fetch("the_image")
-    the_actor.actor_id = params.fetch("the_actor_id")
 
     the_actor.save
 
-    redirect_to("/movies/#{the_actor.id}")
+    redirect_to("/actors/#{the_actor.id}")
   end
 
   def create
@@ -23,7 +22,6 @@ class ActorsController < ApplicationController
     m.dob = params.fetch("the_dob")
     m.bio = params.fetch("the_bio")
     m.image = params.fetch("the_image")
-    m.actor_id = params.fetch("the_actor_id")
 
     m.save
 
